@@ -523,17 +523,17 @@ def copy_all_playlists(
                 sys.exit(1)
             print(f"NOTE: Created playlist '{pl_name}' with ID: {dst_pl_id}")
 
-        copier(
-            iter_spotify_playlist(
-                src_pl["id"],
-                spotify_encoding=spotify_playlists_encoding,
-                reverse_playlist=reverse_playlist,
-            ),
-            dst_pl_id,
-            dry_run,
-            track_sleep,
-            yt_search_algo,
-        )
-        print("\nPlaylist done!\n")
+            copier(
+                iter_spotify_playlist(
+                    src_pl["id"],
+                    spotify_encoding=spotify_playlists_encoding,
+                    reverse_playlist=reverse_playlist,
+                ),
+                dst_pl_id,
+                dry_run,
+                track_sleep,
+                yt_search_algo,
+            )
+            print("\nPlaylist done!\n")
 
     print("All done!")
