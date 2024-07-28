@@ -60,7 +60,7 @@ def _ytmusic_create_playlist(
                     f"ERROR: (Retrying create_playlist: {title}) {e} in {exception_sleep} seconds"
                 )
                 time.sleep(exception_sleep)
-                exception_sleep *= 2
+                exception_sleep += 21700
 
         return {
             "s2yt error": 'ERROR: Could not create playlist "{title}" after multiple retries'
